@@ -9,7 +9,7 @@ function boxSizing() {
 };
 
 const logger = function (event) {
-    span.textContent = event.target.value
+    span.textContent = event.target.value + "%"
 };
 
 range.addEventListener('input', logger)
