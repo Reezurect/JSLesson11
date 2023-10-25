@@ -1,11 +1,32 @@
 'use strict'
 
-const btn = document.getElementById('btn');
+const range = document.getElementById('range');
+const span = document.getElementById('range-span');
 
-btn.addEventListener('click', function () {
-    const square = document.querySelector('square');
-    square.style.backgroundColor = 'green';
-});
+function boxSizing() {
+    let val = range.value;
+    circle.style.boxSizing = val + "%";
+};
+
+const logger = function (event) {
+    span.textContent = event.target.value
+};
+
+range.addEventListener('input', logger)
+
+
+
+
+document.addEventListener("DOMContentLoaded", backgroundColor());
+document.getElementById('btn').addEventListener("click", backgroundColor);
+function backgroundColor() {
+    let x = document.getElementById('square');
+    if (x.style.backgroundColor == "") {
+        x.style.backgroundColor = "green";
+    } else {
+        x.style.backgroundColor = ""
+    }
+};
 
 document.addEventListener("DOMContentLoaded", eCloseclick());
 document.getElementById('btn').addEventListener("click", eCloseclick);
@@ -17,3 +38,5 @@ function eCloseclick() {
         x.style.display = "none"
     }
 };
+
+console.dir(circle);
