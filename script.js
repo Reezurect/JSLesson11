@@ -3,9 +3,11 @@
 const range = document.getElementById('range');
 const span = document.getElementById('range-span');
 
-function boxSizing() {
-    let val = range.value;
-    circle.style.boxSizing = val + "%";
+function fun1() {
+    let rng = document.getElementById('range');
+    let cir = document.getElementById('circle');
+    cir.style.width = rng.value + "px";
+    cir.style.height = rng.value + "px";
 };
 
 const logger = function (event) {
